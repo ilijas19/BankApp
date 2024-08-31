@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <title>Bank App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/querries.css" />
+  </head>
+  <body>
+    <div class="phone-menu">
+      <h2 class="menu-heading">Menu</h2>
+      <ul class="menu">
+        <li class="nav-btn-login menu-li">Login</li>
+        <li class="nav-btn-register menu-li">Register</li>
+        <li class="nav-btn-help menu-li">Help</li>
+        <li class="nav-btn-logout menu-li">Log out</li>
+      </ul>
+      <i class="fa-regular fa-circle-xmark menu-close-icon"></i>
+    </div>
+    <div class="help-popup">
+      <div class="popup-header">
+        <h2>Testing Accounts</h2>
+        <button class="close-btn popup-close-btn">&times;</button>
+      </div>
+      <div class="popup-content">
+        <ul>
+          <li>
+            <strong>Username:</strong> ig | <strong>Password:</strong> 1111
+          </li>
+          <li>
+            <strong>Username:</strong> gf | <strong>Password:</strong> 2222
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <header>
+      <nav class="navigation">
+        <p class="nav-text">Login</p>
+        <img
+          class="logo"
+          src="img/—Pngtree—lion head face logo silhouette_15317165-min.png"
+          alt=""
+        />
+        <div class="navigation-log-reg-div">
+          <button class="navigation-help-btn nav-btn-help">Help</button>
+          <button class="navigation-logout-btn nav-btn-logout">Logout</button>
+
+          <button class="navigation-login-btn nav-btn-login">Login</button>
+          <button class="navigation-register-btn nav-btn-register">
+            Register
+          </button>
+          <i class="fa-solid fa-bars menu-icon"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- LOGIN REGISTER SECTION -->
+      <section class="login-register-section">
+        <div class="login-div">
+          <h2 class="heading-secondary login-color">Login</h2>
+          <form class="login-form form" action="">
+            <div class="input-container">
+              <i class="fa-solid fa-user form-icon login-color"></i>
+              <input
+                class="login-user form-input"
+                type="text"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-container">
+              <i class="fa-solid fa-lock form-icon login-color"></i>
+              <input
+                class="login-password form-input"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <button class="log-in-btn form-btn">Login</button>
+          </form>
+        </div>
+        <div class="register-div">
+          <h2 class="heading-secondary register-color">Register</h2>
+          <form class="register-form form" action="">
+            <div class="input-container">
+              <i class="fa-solid fa-person form-icon register-color"></i>
+              <input
+                class="register-fullname form-input"
+                type="text"
+                placeholder="Full Name"
+              />
+            </div>
+            <div class="input-container">
+              <i class="fa-solid fa-user form-icon register-color"></i>
+              <input
+                class="register-username form-input"
+                type="text"
+                placeholder="Username"
+              />
+            </div>
+            <div class="input-container">
+              <i class="fa-solid fa-circle-info form-icon register-color"></i>
+              <input
+                class="register-age form-input"
+                type="number"
+                placeholder="Age (18+)"
+              />
+            </div>
+
+            <div class="input-container">
+              <i class="fa-solid fa-lock form-icon register-color"></i>
+              <input
+                class="register-password form-input"
+                type="password"
+                placeholder="Password"
+              />
+            </div>
+            <div class="input-container">
+              <i class="fa-solid fa-lock form-icon register-color"></i>
+              <input
+                class="register-repeat form-input"
+                type="password"
+                placeholder="Repeat Password"
+              />
+            </div>
+            <button class="reg-btn form-btn">Register</button>
+          </form>
+        </div>
+      </section>
+      <!-- APP -->
+      <section class="app">
+        <!-- BALANCE -->
+        <div class="balance">
+          <h2 class="balance-heading">Current Balance</h2>
+          <p class="balance-value">25 000 $</p>
+        </div>
+        <!-- MOVEMENTS -->
+        <div class="movements">
+          <div class="movement">
+            <p class="type type-deposit">1 deposit</p>
+            <p class="value">1300 $</p>
+          </div>
+        </div>
+        <!-- OPERATIONS -->
+        <div class="operations">
+          <!-- transfer -->
+          <div class="operation operation--transfer">
+            <h2 class="operation-heading">Transfer Money</h2>
+            <form class="form from--transfer">
+              <input type="text" class="form__input form__input--to" />
+              <input
+                type="number"
+                class="form__input form__input-transfer-amount"
+              />
+              <button class="form__btn form__btn--transfer">→</button>
+              <label class="form__label">Transfer to</label>
+              <label class="form__label">Amount</label>
+            </form>
+          </div>
+          <!-- loan -->
+          <div class="operation operation--loan">
+            <h2 class="operation-heading">Request Loan</h2>
+            <form class="form from--loan">
+              <input
+                type="number"
+                class="form__input form__input-loan-amount"
+              />
+              <button class="form__btn form__btn--loan">→</button>
+              <label class="form__label amount--label">Amount</label>
+            </form>
+          </div>
+          <!-- delete -->
+          <div class="operation operation--delete">
+            <h2 class="operation-heading">Delete Account</h2>
+            <form class="form from--delete">
+              <input type="text" class="form__input form__input--user" />
+              <input type="text" class="form__input form__input--pin" />
+              <button class="form__btn form__btn--delete">→</button>
+              <label class="form__label">Confirm User</label>
+              <label class="form__label">Confirm Pin</label>
+            </form>
+          </div>
+        </div>
+        <!-- APP BOTTOM -->
+
+        <div class="summary">
+          <div class="value-div">
+            <p class="summary__label">In</p>
+            <p class="summary__value summary__value--in login-color">27000$</p>
+          </div>
+          <div class="value-div">
+            <p class="summary__label">Out</p>
+            <p class="summary__value summary__value--out register-color">
+              1082€
+            </p>
+          </div>
+          <div class="value-div">
+            <p class="summary__label">Interest</p>
+            <p class="summary__value summary__value--interest login-color">
+              323€
+            </p>
+          </div>
+
+          <button class="btn--sort">↓ SORT</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="js/controller.js"></script>
+  </body>
+</html>

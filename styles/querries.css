@@ -1,0 +1,82 @@
+@media (max-width: 1130px) {
+}
+@media (max-width: 1050px) {
+  .btn--sort {
+    margin-left: 0;
+  }
+}
+@media (max-width: 1000px) {
+  html {
+    font-size: 55%;
+  }
+  .app {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .form__input {
+    width: 10rem;
+  }
+}
+@media (max-width: 750px) {
+  .navigation-register-btn,
+  .navigation-login-btn,
+  .navigation-logout-btn,
+  .navigation-help-btn {
+    display: none;
+  }
+  .menu-icon {
+    opacity: 1;
+    font-size: 2.4rem;
+    margin-right: 2rem;
+  }
+  .app {
+    max-width: 500px;
+    padding-bottom: 5rem;
+  }
+  .movements {
+    grid-column: span 2;
+    grid-row: span 3;
+    background-color: #fff;
+    margin: 2rem;
+    margin-bottom: 0;
+    border-radius: 12px;
+    /* margin: 2rem 10rem; */
+  }
+  .operations {
+    grid-column: span 2;
+    /* margin: 2rem 8rem; */
+  }
+  .summary {
+    grid-row: 6;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  .summary {
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+  }
+  .summary__label {
+    grid-row: 1;
+  }
+  .value-div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .btn--sort {
+    grid-column: span 3;
+    width: 40%;
+    justify-self: center;
+    margin-top: 1rem;
+  }
+  .balance-heading,
+  .balance-value {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+}
